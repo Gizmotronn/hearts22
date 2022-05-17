@@ -208,7 +208,7 @@ const RoadmapPartTwo = () => {
 
     return (
         <Section>
-            <Title>What it means....TO US</Title>
+            <Title>Why support the Heart?</Title>
             <Container>
                 <SvgContainer>
                     <DrawSvg />
@@ -220,7 +220,7 @@ const RoadmapPartTwo = () => {
                         <RoadMapItem addToRef={addToRefs} title="James Penney" subtext="Singing for 90 mins where everybody from all different walks of life comes together for that one cause." />
                         <RoadMapItem addToRef={addToRefs} title="Jessee Jenkinson" subtext="Always for Melbourne ❤️🤍💙 Great club with some of the most loyal fans" />
                         <RoadMapItem addToRef={addToRefs} title="Anon" subtext="My whole family are Victory supporters, and although I started following City out of spite, my passion for the sport and club outgrew the spite. Fuck the Victards" />
-                        <RoadMapItem addToRef={addToRefs} title="Goce Todoroski" subtext="taking my nephew to his 1st game 7 years ago when we beat Perth Glory 5-1... now 7 years later we havent missed a game and have turned our whole family of 10 into passionate city fans/members and are always behind the boys" />
+                        <RoadMapItem addToRef={addToRefs} title="Goce Todoroski" subtext="Took my nephew to his 1st game 7 years ago when we beat Perth Glory 5-1... now 7 years later we havent missed a game and have turned our whole family of 10 into passionate city fans/members and are always behind the boys" />
                 </Items>
             </Container>
         </Section>

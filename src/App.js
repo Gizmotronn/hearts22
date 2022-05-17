@@ -3,6 +3,7 @@ import Title from './components/Title';
 import UploadForm from './components/UploadForm';
 import ImageGrid from './components/ImageGrid';
 import Modal from './components/Modal';
+import { useEffect } from 'react';
 
 import { ThemeProvider } from 'styled-components';
 import GlobalStyles from './styles/GlobalStyles';
@@ -11,6 +12,9 @@ import Home from "./components/sections/Home.js";
 import Roadmap from "./components/sections/Roadmap.js";
 import Footer from './components/sections/Footer';
 import styled from "styled-components";
+import RoadmapPartTwo from "./components/sections/Roadmap/RoadmapPartTwo";
+import Testimonials from './components/Testimonials';
+import Two from './components/sections/About/Two';
 
 const Box = styled.div`
 width: 100%;
@@ -23,6 +27,10 @@ align-items: center;
 
 function App() {
   const [selectedImg, setSelectedImg] = useState(null);
+
+  useEffect(() => {
+    document.title = "Melbourne City Tribute";  
+  }, []);
 
   return (
     <>
@@ -41,6 +49,14 @@ function App() {
           <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
         )}
       </div>
+      <ThemeProvider theme={light}>
+        <Box>
+          <RoadmapPartTwo />
+        </Box>
+        <Box>
+          <Two />
+        </Box>
+      </ThemeProvider>
     </>
   );
 }

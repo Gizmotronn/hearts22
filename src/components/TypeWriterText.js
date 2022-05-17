@@ -110,9 +110,6 @@ const TypeWriterText = () => {
               <br />
               We want you to know that we're with you. Every step of the way.
       </SubTitle>
-      <ButtonContainer>
-          <Button text="Explore" link="#home" />
-      </ButtonContainer>
   </>
   )
 }

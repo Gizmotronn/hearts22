@@ -4,6 +4,9 @@ import { Carousel } from 'react-responsive-carousel';
 
 import tw from "../assets/fans/thomasw.jpeg";
 import awf from "../assets/fans/aidanwf.jpeg";
+import l1 from "../assets/fans/liam1.png"
+
+import InstagramEmbed from 'react-instagram-embed';
 
 export default class Testimonials extends Component {
   render() {
