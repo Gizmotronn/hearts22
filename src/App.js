@@ -1,37 +1,21 @@
-import { ThemeProvider } from 'styled-components';
-import GlobalStyles from './styles/GlobalStyles';
-import { light } from "./styles/Themes";
-import { useEffect } from 'react';
-
-import Navigation from "./components/Navigation";
-
-import Home from "./components/sections/Home.js";
-import About from "./components/sections/About";
-import Roadmap from "./components/sections/Roadmap";
-import Showcase from "./components/sections/Showcase";
-import Team from "./components/sections/Team";
-import Faq from "./components/sections/Faq";
-import Footer from "./components/sections/Footer";
+import React, { useState } from 'react';
+import Title from './comps/Title';
+import UploadForm from './comps/UploadForm';
+import ImageGrid from './comps/ImageGrid';
+import Modal from './comps/Modal';
 
 function App() {
-  useEffect(() => {
-    document.title = "Melbourne City 21/22 Tribute";  
-  }, []);
+  const [selectedImg, setSelectedImg] = useState(null);
 
   return (
-    <>
-      <GlobalStyles />
-      <ThemeProvider theme={light}>
-        <Navigation />
-        <Home />
-        <About />
-        <Roadmap />
-        <Showcase />
-        <Team />
-        <Faq />
-        <Footer />
-      </ThemeProvider>
-    </>
+    <div className="App">
+      <Title/>
+      <UploadForm />
+      <ImageGrid setSelectedImg={setSelectedImg} />
+      { selectedImg && (
+        <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
+      )}
+    </div>
   );
 }
 
