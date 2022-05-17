@@ -15,7 +15,6 @@ const Section = styled.section`
 `;
 const Title = styled.h1`
   font-size: ${(props) => props.theme.fontxxl};
-  text-transform: capitalize;
   color: ${(props) => props.theme.text};
   display: flex;
   justify-content: center;
@@ -136,7 +135,6 @@ const Box = styled.p`
 const SubTitle = styled.span`
   display: block;
   font-size: ${(props) => props.theme.fontxl};
-  text-transform: capitalize;
   color: ${(props) => props.theme.text};
 
   @media (max-width: 40em) {
@@ -147,7 +145,6 @@ const SubTitle = styled.span`
 const Text = styled.span`
   display: block;
   font-size: ${(props) => props.theme.fontsm};
-  text-transform: capitalize;
   color: ${(props) => props.theme.text};
 
   font-weight: 400;
