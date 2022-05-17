@@ -127,7 +127,7 @@ const RoadmapItem = ({title, subtext, addToRef}) => {
 const Roadmap = () => {
     const revealRefs = useRef([]);
     revealRefs.current = [];
-    gsap.registerPlugin(ScrollTrigger)
+
 
     const addToRefs = (el) => {
         if(el && !revealRefs.current.includes(el)) {
@@ -151,7 +151,7 @@ const Roadmap = () => {
                         start: 'top center+=200px',
                         end: 'bottom center',
                         scrub:true,
-                        markers:true,
+                        markers:false,
                     }
                 }
             )

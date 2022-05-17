@@ -4,6 +4,12 @@ import Carousel from "./About/Carousel";
 import Button from "../Button";
 import { ThemeProvider } from "styled-components";
 import { dark } from "../../styles/Themes";
+import { Slide } from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css'
+
+import image1 from "../../assets/Fans/1.jpeg";
+import image2 from "../../assets/Fans/2.jpeg";
+import Slideshow from "./About/Slideshow";
 
 const Section = styled.section`
     min-height: 100vh;
@@ -70,7 +76,7 @@ const About = () => {
     return (
         <Section>
             <Container>
-                <Box> <Carousel /> </Box>
+                <Box> <Slideshow /> </Box>
                 <Box>
                     <Title>
                         Welcome to Astronaut Training

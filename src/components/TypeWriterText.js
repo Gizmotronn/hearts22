@@ -78,21 +78,21 @@ const TypeWriterText = () => {
     return (
         <>
         <Title>
-            Discover the Star Sailor 
+            We are Melbourne
             <Typewriter
                 options={{
                     autoStart: true,
                     loop: true,
                 }}
                 onInit={(typewriter) => {
-                    typewriter.typeString('<span class="text-1">Within you</span>')
+                    typewriter.typeString('<span class="text-1">Heart</span>')
                         .callFunction(() => {
                             console.log('String typed out!');
                         })  
                         .pauseFor(2500)
                         .deleteAll()
-                        //.pauseFor(2000)
-                        //.typeString('Part Two, text 2 span')
+                        .pauseFor(2000)
+                        .typeString('<span class="text-2">City</span>')
                         .callFunction(() => {
                             console.log('All strings were deleted!');
                         })
@@ -100,7 +100,16 @@ const TypeWriterText = () => {
                 }}
             />
         </Title>
-        <SubTitle>More than an investment, Star Sailors is an adventure </SubTitle>
+        <SubTitle>From all the fans, we want to thank you for one of our most memorable seasons. 
+                <br />
+                We want to show you why this is our City.
+                <br />
+                We want to show you why this means so much to us.
+                <br />
+                We want to show you who we are.
+                <br />
+                We want you to know that we're with you. Every step of the way.
+        </SubTitle>
         <ButtonContainer>
             <Button text="Explore" link="#home" />
         </ButtonContainer>

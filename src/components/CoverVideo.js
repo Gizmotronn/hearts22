@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import GIF from "../assets/Home Video.mp4";
-import Passion from "../assets/Macca/Passion.png";
+import Passion from "../assets/Macca/golden.png";
 
 const VideoContainer = styled.div`
     width: 100%;
