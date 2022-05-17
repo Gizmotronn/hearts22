@@ -1,6 +1,7 @@
 import { ThemeProvider } from 'styled-components';
 import GlobalStyles from './styles/GlobalStyles';
 import { light } from "./styles/Themes";
+import { useEffect } from 'react';
 
 import Navigation from "./components/Navigation";
 
@@ -13,6 +14,10 @@ import Faq from "./components/sections/Faq";
 import Footer from "./components/sections/Footer";
 
 function App() {
+  useEffect(() => {
+    document.title = "Melbourne City 21/22 Tribute";  
+  }, []);
+
   return (
     <>
       <GlobalStyles />
