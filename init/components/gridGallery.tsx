@@ -1,25 +1,30 @@
 import React from 'react';
-import Image from 'next/image';
 
-const GridGallery: React.FC = () => {
-  const imageCount = 18; // Number of images in the gallery
-
-  const getImagePath = (index: number): string => `/players/${index}.png`;
+const Gallery: React.FC = () => {
+  const photos = [
+    '8.jpg',
+    '9.jpg',
+    '23.jpg'
+  ];
 
   return (
     <div className="grid grid-cols-3 gap-4">
-      {Array.from(Array(imageCount), (_, index) => (
-        <div key={index} className="relative aspect-w-1 aspect-h-1">
-          <Image
-            src={getImagePath(index + 1)}
-            alt={`Player ${index + 1}`}
-            layout="fill"
-            objectFit="cover"
-          />
+      {photos.map((photo) => (
+        <div
+          key={photo}
+          className="relative aspect-w-1 aspect-h-1"
+        >
+          <div className="absolute inset-0 flex items-center justify-center">
+            <img
+              src={`/players/${photo}`}
+              alt={photo}
+              className="object-cover w-full h-full"
+            />
+          </div>
         </div>
       ))}
     </div>
   );
 };
 
-export default GridGallery;
+export default Gallery;
